@@ -177,7 +177,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/04/13/Hexo%E8%A1%A8%E6%A0%BC%E6%97%A0%E6%B3%95%E5%B1%85%E4%B8%AD%E5%92%8C%E5%8F%B3%E5%AF%B9%E9%BD%90%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">1</a>
+            <a href="/2020/04/13/Hexo%E8%A1%A8%E6%A0%BC%E6%97%A0%E6%B3%95%E5%B1%85%E4%B8%AD%E5%92%8C%E5%8F%B3%E5%AF%B9%E9%BD%90%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">Hexo表格无法居中和右对齐的解决方法</a>
         </h2>
 
         <div class="post-meta">
@@ -188,7 +188,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-04-13 11:44:58 / 修改时间：20:10:21" itemprop="dateCreated datePublished" datetime="2020-04-13T11:44:58+08:00">2020-04-13</time>
+              <time title="创建时间：2020-04-13 11:44:58 / 修改时间：20:16:32" itemprop="dateCreated datePublished" datetime="2020-04-13T11:44:58+08:00">2020-04-13</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -219,18 +219,14 @@
 
       
           <p>最近刚刚上手Hexo, 对于有些问题还比较生疏, 对于如题所示, 相信你可能看到它之前已经焦头烂额, 不知如何是好. 我耗费老长时间找到一篇博文, 我的问题已经成功解决, 我把它记录下来, 揣进我终于在互联网搭建成功的简陋的「小屋」里, 也分享给读者们!  我们现在开始吧😀</p>
-<h2 id="解决方法"><a class="header-anchor" href="#解决方法">¶</a>解决方法</h2>
-<h3 id="使用命令"><a class="header-anchor" href="#使用命令">¶</a>使用命令</h3>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm un hexo-renderer-marked --save</span><br><span class="line">npm i hexo-renderer-markdown-it --save</span><br></pre></td></tr></table></figure>
-<h3 id="添加到站点配置文件-即-config-yml文件"><a class="header-anchor" href="#添加到站点配置文件-即-config-yml文件">¶</a>添加到站点配置文件(即_config.yml文件)</h3>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"># Markdown-it config</span><br><span class="line">## Docs: https:&#x2F;&#x2F;github.com&#x2F;celsomiranda&#x2F;hexo-renderer-markdown-it&#x2F;wiki</span><br><span class="line">markdown:</span><br><span class="line">  render:</span><br><span class="line">    html: true</span><br><span class="line">    xhtmlOut: false</span><br><span class="line">    breaks: true</span><br><span class="line">    linkify: true</span><br><span class="line">    typographer: true</span><br><span class="line">    quotes: &#39;“”‘’&#39;</span><br><span class="line">  plugins:</span><br><span class="line">    - markdown-it-abbr</span><br><span class="line">    - markdown-it-footnote</span><br><span class="line">    - markdown-it-ins</span><br><span class="line">    - markdown-it-sub</span><br><span class="line">    - markdown-it-sup</span><br><span class="line">    - markdown-it-emoji  # add emoji</span><br><span class="line">  anchors:</span><br><span class="line">    level: 2</span><br><span class="line">    collisionSuffix: &#39;v&#39;</span><br><span class="line">    permalink: true</span><br><span class="line">    permalinkClass: header-anchor</span><br><span class="line">    permalinkSymbol: ¶</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>注:第一条命令为卸载插件,第二条命令是安装新的插件(个人的说法)</p>
-</blockquote>
-<p>Ta-da! 如同施了魔法一般, 大功告成!</p>
-<h2 id="后记"><a class="header-anchor" href="#后记">¶</a>后记</h2>
-<p>最重要的是自己学会解决问题, 自己去找到答案, 提高「搜商」, 在茫茫互联网中快速找到自己想要的信息. 也写给自己.</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/04/13/Hexo%E8%A1%A8%E6%A0%BC%E6%97%A0%E6%B3%95%E5%B1%85%E4%B8%AD%E5%92%8C%E5%8F%B3%E5%AF%B9%E9%BD%90%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
