@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/32favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/16favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"qzsking1.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="你仅仅需要这一篇拥有你的个人Blog！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo博客框架+托管Github(记录整理上手)👍">
+<meta property="og:url" content="https://qzsking1.github.io/2020/04/18/Hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6+%E6%89%98%E7%AE%A1Github(%E8%AE%B0%E5%BD%95%E6%95%B4%E7%90%86%E4%B8%8A%E6%89%8B)%F0%9F%91%8D/index.html">
+<meta property="og:site_name" content="秦一的博客">
+<meta property="og:description" content="你仅仅需要这一篇拥有你的个人Blog！">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-04-18T07:26:05.000Z">
+<meta property="article:modified_time" content="2020-04-18T07:30:52.236Z">
+<meta property="article:author" content="秦一">
+<meta property="article:tag" content="记录">
+<meta property="article:tag" content="分享">
+<meta property="article:tag" content="Hexo">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://qzsking1.github.io/2020/04/18/Hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6+%E6%89%98%E7%AE%A1Github(%E8%AE%B0%E5%BD%95%E6%95%B4%E7%90%86%E4%B8%8A%E6%89%8B)%F0%9F%91%8D/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Hexo博客框架+托管Github(记录整理上手)👍 | 秦一的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">秦一的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://qzsking1.github.io/2020/04/18/Hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6+%E6%89%98%E7%AE%A1Github(%E8%AE%B0%E5%BD%95%E6%95%B4%E7%90%86%E4%B8%8A%E6%89%8B)%F0%9F%91%8D/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="秦一">
+      <meta itemprop="description" content="吸引着每一个人">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="秦一的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Hexo博客框架+托管Github(记录整理上手)👍
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-04-18 15:26:05 / 修改时间：15:30:52" itemprop="dateCreated datePublished" datetime="2020-04-18T15:26:05+08:00">2020-04-18</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">博客搭建</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.3k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>你仅仅需要这一篇拥有你的个人<strong>Blog</strong>！</p>
+<a id="more"></a>
+<h2 id="开篇之言🐣"><a class="header-anchor" href="#开篇之言🐣">¶</a>开篇之言🐣</h2>
+<p>当你拥有自己的个人博客是不是一件很酷的事情? 不需要其他平台的限制, 完全由你掌控, 闲暇之余抓住突如其来的想法, 侃侃技术, 分享热爱, 岂不美哉!</p>
+<h2 id="热身🏃"><a class="header-anchor" href="#热身🏃">¶</a>热身🏃</h2>
+<p>你的<s>必备</s>基础:</p>
+<ul>
+<li><s>精通命令提示符</s></li>
+<li><s>精通前端</s></li>
+<li><s>精通Git和GitHub</s></li>
+<li><s>精通Node.js</s></li>
+<li>看的懂我写的字</li>
+</ul>
+<p>你可别被吓跑了, 简简单单搭起来, 有模有样, 就跟着我说的做就可以了, 删除线无视就好. 那我们开始!</p>
+<h2 id="开始💪"><a class="header-anchor" href="#开始💪">¶</a>开始💪</h2>
+<h3 id="必须的工具"><a class="header-anchor" href="#必须的工具">¶</a>必须的工具</h3>
+<ul>
+<li><a href="https://git-scm.com" target="_blank" rel="noopener">Git</a></li>
+<li><a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a></li>
+</ul>
+<blockquote>
+<p>(个人说法):Node.js是为了安装Hexo, Node.js会包含环境变量及npm的安装. Git是为了复制GitHub的仓库到本地, 部署博客到GitHub.</p>
+</blockquote>
+<blockquote>
+<p>注意: 下面提到的输入(包括后文), 即在「powershell」中, 在「cmd」,「git bash here」也都可以, 都是平行的.「powershell」使用<code>shift+右键</code>可直接在此目录打开.</p>
+</blockquote>
+<p><strong>输入</strong>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git version</span><br><span class="line">或者git --version</span><br></pre></td></tr></table></figure>
+<p>显示版本号, 表明Git安装成功!</p>
+<p><strong>分别输入</strong>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+<p>显示版本号, 表明Node.js安装成功!</p>
+<blockquote>
+<p>还要提醒一点, 可以注意一下其中命令行中执行命令之后所显示的信息</p>
+</blockquote>
+<h3 id="安装Hexo"><a class="header-anchor" href="#安装Hexo">¶</a>安装Hexo</h3>
+<ul>
+<li>(个人说法):Hexo即是博客的框架, 就好像搭建一个小屋, Hexo为你用木头打好竖桩, 呈现出一定的形状, 而你的文字你所写的一篇篇文章就是给小屋把墙筑好, 屋顶搭好瓦片.</li>
+</ul>
+<p>首先, 你选择你心仪的磁盘或者磁盘的某一个文件夹下建立一个叫「blog」的文件夹(当然你可以随便取名), 在此文件夹下执行Hexo安装命令:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>安成之后, 初始化博客, 输入:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
+<p>这时候你就可以检测一下网站的雏形了,分别输入:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g   #生成静态文件</span><br><span class="line">hexo s   #启动服务预览</span><br></pre></td></tr></table></figure>
+<p>完成之后, 在浏览器打开以下地址:<br>
+<a href="localhost:4000">localhost:4000</a><br>
+就可以看到你的博客了!</p>
+<blockquote>
+<p>注: 4000是默认的端口, 你可以在命令行中看到, 当然也可以更改它.</p>
+</blockquote>
+<h3 id="托管到GitHub"><a class="header-anchor" href="#托管到GitHub">¶</a>托管到GitHub</h3>
+<ol>
+<li><strong>注册</strong><a href="https://github.com/" target="_blank" rel="noopener">github</a>账号,不做赘述.</li>
+<li><strong>创建仓库</strong>. 点击右上角你的头像-&gt;点击「New repository」-&gt;repository name填写格式为:你的github账号的名字.github.io(重点!一定按这个格式)-&gt;「initialize this repository with a README」打上勾(其实无所谓)-&gt;点击「create repository」</li>
+<li><strong>连接Github与本地</strong>. 打开git bash, 输入下面命令：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;你的GitHub用户名&quot;</span><br><span class="line">git config --global user.email &quot;你的GitHub注册邮箱&quot;</span><br></pre></td></tr></table></figure>
+<p>可以用以下两条，检查一下你有没有输对</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
+<p>生成ssh密钥文件, 一路回车(也要看一下英文是不是还要输入一些东西)：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;</span><br></pre></td></tr></table></figure>
+<p>找到<code>id_rsa.pub</code>文件(C盘-&gt;users-&gt;你的用户名-&gt;.ssh文件夹-&gt;id_rsa.pub)记事本打开,复制. 打开<a href="https://github.com/settings/keys" target="_blank" rel="noopener">GitHub_Settings_keys</a>页面, 新建new SSH Key. Title为标题，任意填即可，将刚刚复制的<code>id_rsa.pub</code>内容粘贴进去，最后点击<code>Add SSH key</code>.<br>
+4. <strong>检测GitHub公钥设置是否成功</strong>.输入:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh git@github.com</span><br></pre></td></tr></table></figure>
+<p><code>you've successfully authenticated</code>即表示成功</p>
+<h3 id="配置"><a class="header-anchor" href="#配置">¶</a>配置</h3>
+<p>打开站点配置文件 <code>_config.yml</code>(即你的blog目录下的), 翻到最后, 或者使用搜索功能, 修改为:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https:&#x2F;&#x2F;github.com&#x2F;YourgithubName&#x2F;YourgithubName.github.io.git #YourgithubName就是你的GitHub账户名字</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意:yml文件的语法格式冒号后面必须要有空格, 并且必须相同层级间的行与行之间要对齐. yml用<code>记事本</code>打开即可.</p>
+</blockquote>
+<p>安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>然后</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意:<code>hexo d</code>时可能要你输入username和password</p>
+</blockquote>
+<p>你的博客<code>https://yourname.github.io</code>已经可以在外网访问啦!</p>
+<h2 id="终点-看完它-📌"><a class="header-anchor" href="#终点-看完它-📌">¶</a>终点(看完它)📌</h2>
+<p>虽然这篇文章没有做到图文并茂, 但是我想我的步骤叙述已经非常详细. 原理作用这些命令都是干什么的我没有讲太多(不过你的英文学的还不错的话大概可以看懂),  但完全可以使迫切的你快速搭建博客. 之后你的工作就是给你的「小屋」刷刷油漆, 好好装饰一般(即博客写上你的名字,更换主题等), 这个不着急, 慢慢来玩. 还有, 我们要有折腾的精神, 哪里出错了, 去搜索解决, 实在不行, 直接干掉<code>blog</code>文件夹重来就是了. 下期我会接着做Hexo的基础命令等相关, 对这篇文章有更好的理解.</p>
+<blockquote>
+<p>遇到问题, 自己思考去解决, 实在不能解决, 欢迎找鄙人, 遇到本文中的错误, 还麻烦读者联系我进行订正. 还有大家遇到的问题都可以反馈给我, 我把这些问题放在这里和大家避坑.</p>
+</blockquote>
+<blockquote>
+<p>欢迎大家转发 多多支持!咱们下次再见👋</p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>欢迎打赏</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.jpg" alt="秦一 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="秦一 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>秦一
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://qzsking1.github.io/2020/04/18/Hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6+%E6%89%98%E7%AE%A1Github(%E8%AE%B0%E5%BD%95%E6%95%B4%E7%90%86%E4%B8%8A%E6%89%8B)%F0%9F%91%8D/" title="Hexo博客框架+托管Github(记录整理上手)👍">https://qzsking1.github.io/2020/04/18/Hexo博客框架+托管Github(记录整理上手)👍/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%B0%E5%BD%95/" rel="tag"># 记录</a>
+              <a href="/tags/%E5%88%86%E4%BA%AB/" rel="tag"># 分享</a>
+              <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/04/13/Hexo%E8%A1%A8%E6%A0%BC%E6%97%A0%E6%B3%95%E5%B1%85%E4%B8%AD%E5%92%8C%E5%8F%B3%E5%AF%B9%E9%BD%90%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" rel="prev" title="Hexo表格无法居中和右对齐的解决方法">
+      <i class="fa fa-chevron-left"></i> Hexo表格无法居中和右对齐的解决方法
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#开篇之言🐣"><span class="nav-number">1.</span> <span class="nav-text">开篇之言🐣</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#热身🏃"><span class="nav-number">2.</span> <span class="nav-text">热身🏃</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始💪"><span class="nav-number">3.</span> <span class="nav-text">开始💪</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#必须的工具"><span class="nav-number">3.1.</span> <span class="nav-text">必须的工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number">3.2.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#托管到GitHub"><span class="nav-number">3.3.</span> <span class="nav-text">托管到GitHub</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置"><span class="nav-number">3.4.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#终点-看完它-📌"><span class="nav-number">4.</span> <span class="nav-text">终点(看完它)📌</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="秦一"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">秦一</p>
+  <div class="site-description" itemprop="description">吸引着每一个人</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://t.me/qinyi1" title="Telegram → https:&#x2F;&#x2F;t.me&#x2F;qinyi1" rel="noopener" target="_blank"><i class="fab fa-telegram fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/images/wechat.jpg" title="WeChat → &#x2F;images&#x2F;wechat.jpg"><i class="fab fa-weixin fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">秦一</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
