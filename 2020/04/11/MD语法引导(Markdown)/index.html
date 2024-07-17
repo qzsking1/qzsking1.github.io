@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/32favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/16favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"qzsking1.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Mardown是我开始写博客所接触的第一种语言，风格简约，工整精致干净，完全在键盘操作，不操心排版，保持专注，使我一见钟情！让我们开始吧，Let’s go！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MD语法引导(Markdown)">
+<meta property="og:url" content="https://qzsking1.github.io/2020/04/11/MD%E8%AF%AD%E6%B3%95%E5%BC%95%E5%AF%BC(Markdown)/index.html">
+<meta property="og:site_name" content="秦一的博客">
+<meta property="og:description" content="Mardown是我开始写博客所接触的第一种语言，风格简约，工整精致干净，完全在键盘操作，不操心排版，保持专注，使我一见钟情！让我们开始吧，Let’s go！">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2020/04/10/qw9Zax6pRkJd2B3.jpg">
+<meta property="article:published_time" content="2020-04-11T14:07:14.000Z">
+<meta property="article:modified_time" content="2023-01-18T08:52:05.539Z">
+<meta property="article:author" content="秦一">
+<meta property="article:tag" content="记录">
+<meta property="article:tag" content="分享">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/04/10/qw9Zax6pRkJd2B3.jpg">
+
+<link rel="canonical" href="https://qzsking1.github.io/2020/04/11/MD%E8%AF%AD%E6%B3%95%E5%BC%95%E5%AF%BC(Markdown)/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>MD语法引导(Markdown) | 秦一的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">秦一的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://qzsking1.github.io/2020/04/11/MD%E8%AF%AD%E6%B3%95%E5%BC%95%E5%AF%BC(Markdown)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="秦一">
+      <meta itemprop="description" content="吸引着每一个人">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="秦一的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          MD语法引导(Markdown)
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-04-11 22:07:14" itemprop="dateCreated datePublished" datetime="2020-04-11T22:07:14+08:00">2020-04-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-01-18 16:52:05" itemprop="dateModified" datetime="2023-01-18T16:52:05+08:00">2023-01-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF%E8%AF%AD%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">技术语法</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.7k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Mardown是我开始写博客所接触的第一种语言，风格简约，工整精致干净，完全在键盘操作，不操心排版，保持专注，使我一见钟情！让我们开始吧，Let’s go！</p>
+<a id="more"></a>
+<h2 id="佳软推荐"><a class="header-anchor" href="#佳软推荐">¶</a>佳软推荐</h2>
+<ul>
+<li>Windows用户推荐：「Typora」「有道云笔记」.</li>
+<li>Android用户推荐：「纯纯写作」.</li>
+<li>苹果用户（iOS 和 macOS）可以在 App Store 搜索「Markdown」下载（没用过苹果产品，没有发言权）.</li>
+<li>目前我的使用：「有道云笔记」.</li>
+</ul>
+<h2 id="清爽的文章开始生成"><a class="header-anchor" href="#清爽的文章开始生成">¶</a>清爽的文章开始生成</h2>
+<h3 id="1-标题"><a class="header-anchor" href="#1-标题">¶</a>1.标题</h3>
+<p>正文的标题从<code> ##</code> 开始，<code>#</code> 留给文章的标题（也可以不写）.这样的大纲结构也可以很方便地转换为思维导图（Markdown to Xmind / MindNode / 幕布 / 百度脑图……）.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">标记格式</th>
+<th style="text-align:left">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>#</code>+<code>空格</code>+<code>内容</code></td>
+<td style="text-align:left">一级标题</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>##</code>+<code>空格</code>+<code>内容</code></td>
+<td style="text-align:left">二级标题</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>###</code>+<code>空格</code>+<code>内容</code></td>
+<td style="text-align:left">三级标题</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注:Markdown 最大支持 <code>######</code> 六级标题,为了保持层级的简单,防止出现过于复杂的章节,请谨慎使用四级标题（除非是长文章）.如果三级标题下有并列性的内容,可以使用加粗、有序列表或无序列表代表末级标题.还有所用的符号全部为英文符号,之后亦然.</p>
+</blockquote>
+<h3 id="2-排序"><a class="header-anchor" href="#2-排序">¶</a>2.排序</h3>
+<h4 id="无序列表"><a class="header-anchor" href="#无序列表">¶</a>无序列表</h4>
+<p>使用 <code>‐</code> 或 <code>*</code> 或<code> +</code> 并跟随1个空格来表示无序列表。建议使用<code>‐</code>(连字符,hyphen).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">例:</span><br><span class="line">- 我是谁</span><br><span class="line">- 我从哪里来</span><br><span class="line">- 我到哪里去</span><br></pre></td></tr></table></figure>
+<p>预览:</p>
+<ul>
+<li>我是谁</li>
+<li>我从哪里来</li>
+<li>我到哪里去</li>
+</ul>
+<h4 id="有序列表"><a class="header-anchor" href="#有序列表">¶</a>有序列表</h4>
+<p>直接使用<code>1.</code> <code>2.</code>即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">例:</span><br><span class="line">1. 斜月沉沉藏海雾，碣石潇湘无限路。</span><br><span class="line">2. 不知乘月几人归，落月摇情满江树。</span><br><span class="line">3. 春江潮水连海平，海上明月共潮生。</span><br></pre></td></tr></table></figure>
+<p>预览:</p>
+<ol>
+<li>斜月沉沉藏海雾，碣石潇湘无限路。</li>
+<li>不知乘月几人归，落月摇情满江树。</li>
+<li>春江潮水连海平，海上明月共潮生。</li>
+</ol>
+<h4 id="有序列表番外篇"><a class="header-anchor" href="#有序列表番外篇">¶</a>有序列表番外篇</h4>
+<p>如果你比较懒,或者把序号弄乱了.没有关系,Markdown 编辑器自动会对序号进行纠错.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">例:</span><br><span class="line">1.  Foo.</span><br><span class="line">1.  Bar.</span><br><span class="line">3.  Baz.</span><br></pre></td></tr></table></figure>
+<p>预览:</p>
+<ol>
+<li>Foo.</li>
+<li>Bar.</li>
+<li>Baz.</li>
+</ol>
+<h4 id="嵌套列表"><a class="header-anchor" href="#嵌套列表">¶</a>嵌套列表</h4>
+<p>缩进 2 ~ 4 个空格或一个 <code>Tab</code>（推荐）,可以嵌套列表.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">例1:</span><br><span class="line">1.  不知乘月几人归，落月摇情满江树。</span><br><span class="line">	- 与君吟弄风月，端不负平生。</span><br><span class="line">	- 对秋深，离恨苦，数夜满庭风雨。</span><br><span class="line">	- 五月畲田收火米，三更津吏报潮鸡。</span><br><span class="line">2.  人姝丽，粉香吹下，夜寒风细。</span><br><span class="line">	- 弓弦抱汉月，马足践胡尘。</span><br><span class="line">	- 寒月悲笳，万里西风瀚海沙。</span><br><span class="line">	- 东堂坐见山，云风相吹嘘。</span><br><span class="line">3.  沅溪夏晚足凉风，春酒相携就竹丛。</span><br><span class="line">	- 白发渔樵江渚上，惯看秋月春风。</span><br><span class="line">	- 归来独卧逍遥夜，梦里相逢酩酊天。</span><br><span class="line">	- 致君尧舜上，再使风俗淳。</span><br></pre></td></tr></table></figure>
+<p>预览:</p>
+<ol>
+<li>不知乘月几人归，落月摇情满江树。
+<ul>
+<li>与君吟弄风月，端不负平生。</li>
+<li>对秋深，离恨苦，数夜满庭风雨。</li>
+<li>五月畲田收火米，三更津吏报潮鸡。</li>
+</ul>
+</li>
+<li>人姝丽，粉香吹下，夜寒风细。
+<ul>
+<li>弓弦抱汉月，马足践胡尘。</li>
+<li>寒月悲笳，万里西风瀚海沙。</li>
+<li>东堂坐见山，云风相吹嘘。</li>
+</ul>
+</li>
+<li>沅溪夏晚足凉风，春酒相携就竹丛。
+<ul>
+<li>白发渔樵江渚上，惯看秋月春风。</li>
+<li>归来独卧逍遥夜，梦里相逢酩酊天。</li>
+<li>致君尧舜上，再使风俗淳。</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">例2:</span><br><span class="line">- 秦一的栏目</span><br><span class="line">	&gt; - 排版美学</span><br><span class="line">	&gt; - 数字生活    </span><br><span class="line">	&gt; - 日志随笔</span><br><span class="line">- 联系方式</span><br><span class="line">	&gt; - Telegram：t.me&#x2F;qinyi1</span><br><span class="line">	&gt; - WeChat：qzsking1</span><br></pre></td></tr></table></figure>
+<p>预览:</p>
+<ul>
+<li>秦一的栏目
+<blockquote>
+<ul>
+<li>排版美学</li>
+<li>数字生活</li>
+<li>日志随笔</li>
+</ul>
+</blockquote>
+</li>
+<li>联系方式
+<blockquote>
+<ul>
+<li>Telegram：<a href="http://t.me/qinyi1" target="_blank" rel="noopener">t.me/qinyi1</a></li>
+<li>WeChat：qzsking1</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h5 id="Tips"><a class="header-anchor" href="#Tips">¶</a>Tips</h5>
+<ul>
+<li><code>Tab</code>缩进一级</li>
+<li><code>Shift + Tab</code> 提升一级</li>
+</ul>
+<h3 id="3-文字特殊说明"><a class="header-anchor" href="#3-文字特殊说明">¶</a>3.文字特殊说明</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">标记格式</th>
+<th style="text-align:left">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>**</code>+<code>加粗</code>+<code>**</code></td>
+<td style="text-align:left"><strong>加粗</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>*</code>+<code>斜体</code>+<code>*</code></td>
+<td style="text-align:left"><em>斜体</em></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>~~</code>+<code>删除线</code>+<code>~~</code></td>
+<td style="text-align:left"><s>删除线</s></td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-引用"><a class="header-anchor" href="#4-引用">¶</a>4.引用</h3>
+<p>每行开头使用<code>&gt;</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">例:</span><br><span class="line">&gt; 我们是为人民服务的，所以，我们如果有缺点，就不怕别人批评指出。</span><br><span class="line">&gt; by 毛泽东：《为人民服务》（1944 年 9 月 8 日）</span><br></pre></td></tr></table></figure>
+<p>预览:</p>
+<blockquote>
+<p>我们是为人民服务的，所以，我们如果有缺点，就不怕别人批评指出。<br>
+by 毛泽东：《为人民服务》（1944 年 9 月 8 日）</p>
+</blockquote>
+<h3 id="5-制作待办事项To-do-List"><a class="header-anchor" href="#5-制作待办事项To-do-List">¶</a>5.制作待办事项To-do List</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">语法:</span><br><span class="line">- [ ] 备忘1</span><br><span class="line">- [x] 备忘2</span><br><span class="line">- [ ] 备忘3</span><br></pre></td></tr></table></figure>
+<p>预览:</p>
+<ul>
+<li>[ ] 备忘1</li>
+<li>[x] 备忘2</li>
+<li>[ ] 备忘3</li>
+</ul>
+<h3 id="6-表格"><a class="header-anchor" href="#6-表格">¶</a>6.表格</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">语法:</span><br><span class="line">|左对齐 | 居中对齐 | 右对齐|</span><br><span class="line">|:---------|:--------:|-------:|</span><br><span class="line">|blah | blah|blah|</span><br></pre></td></tr></table></figure>
+<p>预览:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">左对齐</th>
+<th style="text-align:center">居中对齐</th>
+<th style="text-align:right">右对齐</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">blah</td>
+<td style="text-align:center">blah</td>
+<td style="text-align:right">blah</td>
+</tr>
+</tbody>
+</table>
+<h3 id="7-链接"><a class="header-anchor" href="#7-链接">¶</a>7.链接</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">语法:</span><br><span class="line">[秦一的博客](qzking1.github.io)</span><br></pre></td></tr></table></figure>
+<p>预览:<br>
+<a href="qzking1.github.io">秦一的博客</a></p>
+<h3 id="8-图片"><a class="header-anchor" href="#8-图片">¶</a>8.图片</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">语法:</span><br><span class="line">![秦一Avatar](https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;04&#x2F;10&#x2F;qw9Zax6pRkJd2B3.jpg)</span><br></pre></td></tr></table></figure>
+<p>预览:<br>
+<img src="https://i.loli.net/2020/04/10/qw9Zax6pRkJd2B3.jpg" alt="秦一Avatar"></p>
+<h3 id="9-行内代码"><a class="header-anchor" href="#9-行内代码">¶</a>9.行内代码</h3>
+<p>用 2 个重音符 「`」包裹(一般在ESC的下面)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">例:</span><br><span class="line">&#96;Markdown&#96; 是一种轻量级标记语言。</span><br></pre></td></tr></table></figure>
+<p>预览:<br>
+<code>Markdown</code> 是一种轻量级标记语言。</p>
+<h3 id="10-代码块"><a class="header-anchor" href="#10-代码块">¶</a>10.代码块</h3>
+<p>将 3 个重音符 「`」 置于代码块的首行和末行<br>
+预览:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cout&lt;&lt;&quot;Hello&quot;;</span><br></pre></td></tr></table></figure>
+<h3 id="11-强制换行"><a class="header-anchor" href="#11-强制换行">¶</a>11.强制换行</h3>
+<p>在行末使用空格（两个以上） + 换行（Enter）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">例:</span><br><span class="line">- Her neck was short but rounded and her arms plump and enticing.（两个以上的空格）  </span><br><span class="line">  她的脖子短，但浑圆可爱；两臂丰腴，也很动人。by 《飘》</span><br><span class="line">- This was enticing to Wozniak, even more than any prospect of getting rich.（两个以上的空格）  </span><br><span class="line">  这句话对沃兹尼亚克的诱惑太大了，比变成富人的诱惑还要大。by 《乔布斯传》</span><br></pre></td></tr></table></figure>
+<p>预览:</p>
+<ul>
+<li>Her neck was short but rounded and her arms plump and enticing.（两个以上的空格）<br>
+她的脖子短，但浑圆可爱；两臂丰腴，也很动人。by 《飘》</li>
+<li>This was enticing to Wozniak, even more than any prospect of getting rich.（两个以上的空格）<br>
+这句话对沃兹尼亚克的诱惑太大了，比变成富人的诱惑还要大。by 《乔布斯传》</li>
+</ul>
+<h2 id="拿它可以做什么"><a class="header-anchor" href="#拿它可以做什么">¶</a>拿它可以做什么?</h2>
+<p>Markdown 用途很广.Write once,export everywhere：写博客、写邮件、排推文、做 PPT 等.</p>
+<h2 id="授之以渔"><a class="header-anchor" href="#授之以渔">¶</a>授之以渔</h2>
+<p>记得参考官方文档,致力于你的快速学习.</p>
+<h2 id="写在最后Last-but-not-least"><a class="header-anchor" href="#写在最后Last-but-not-least">¶</a>写在最后Last but not least</h2>
+<p>是不是手里开始痒痒了?你已经学到了基本的操作,用这些写一篇文章绰绰有余.不妨赶紧去试试.当然Markdown的玩法不只是这些,进阶的还有「流程图」,「甘特图」,「数学公式」等.哈哈,这也我的首先完成的第一篇博文,纪念意义的时刻.😀咱们下期再见,Have a nice day!</p>
+<h2 id="参考"><a class="header-anchor" href="#参考">¶</a>参考</h2>
+<ul>
+<li>庭勃士(无私的大好人)</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>欢迎打赏</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.jpg" alt="秦一 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="秦一 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>秦一
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://qzsking1.github.io/2020/04/11/MD%E8%AF%AD%E6%B3%95%E5%BC%95%E5%AF%BC(Markdown)/" title="MD语法引导(Markdown)">https://qzsking1.github.io/2020/04/11/MD语法引导(Markdown)/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%B0%E5%BD%95/" rel="tag"># 记录</a>
+              <a href="/tags/%E5%88%86%E4%BA%AB/" rel="tag"># 分享</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/04/13/Hexo%E8%A1%A8%E6%A0%BC%E6%97%A0%E6%B3%95%E5%B1%85%E4%B8%AD%E5%92%8C%E5%8F%B3%E5%AF%B9%E9%BD%90%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" rel="next" title="Hexo表格无法居中和右对齐的解决方法">
+      Hexo表格无法居中和右对齐的解决方法 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#佳软推荐"><span class="nav-number">1.</span> <span class="nav-text">佳软推荐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#清爽的文章开始生成"><span class="nav-number">2.</span> <span class="nav-text">清爽的文章开始生成</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-标题"><span class="nav-number">2.1.</span> <span class="nav-text">1.标题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-排序"><span class="nav-number">2.2.</span> <span class="nav-text">2.排序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#无序列表"><span class="nav-number">2.2.1.</span> <span class="nav-text">无序列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#有序列表"><span class="nav-number">2.2.2.</span> <span class="nav-text">有序列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#有序列表番外篇"><span class="nav-number">2.2.3.</span> <span class="nav-text">有序列表番外篇</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#嵌套列表"><span class="nav-number">2.2.4.</span> <span class="nav-text">嵌套列表</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Tips"><span class="nav-number">2.2.4.1.</span> <span class="nav-text">Tips</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-文字特殊说明"><span class="nav-number">2.3.</span> <span class="nav-text">3.文字特殊说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-引用"><span class="nav-number">2.4.</span> <span class="nav-text">4.引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-制作待办事项To-do-List"><span class="nav-number">2.5.</span> <span class="nav-text">5.制作待办事项To-do List</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-表格"><span class="nav-number">2.6.</span> <span class="nav-text">6.表格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-链接"><span class="nav-number">2.7.</span> <span class="nav-text">7.链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-图片"><span class="nav-number">2.8.</span> <span class="nav-text">8.图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-行内代码"><span class="nav-number">2.9.</span> <span class="nav-text">9.行内代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-代码块"><span class="nav-number">2.10.</span> <span class="nav-text">10.代码块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-强制换行"><span class="nav-number">2.11.</span> <span class="nav-text">11.强制换行</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拿它可以做什么"><span class="nav-number">3.</span> <span class="nav-text">拿它可以做什么?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#授之以渔"><span class="nav-number">4.</span> <span class="nav-text">授之以渔</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写在最后Last-but-not-least"><span class="nav-number">5.</span> <span class="nav-text">写在最后Last but not least</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">6.</span> <span class="nav-text">参考</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="秦一"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">秦一</p>
+  <div class="site-description" itemprop="description">吸引着每一个人</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="/images/wechat.jpg" title="WeChat → &#x2F;images&#x2F;wechat.jpg"><i class="fab fa-weixin fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">秦一</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
