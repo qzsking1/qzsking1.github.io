@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/32favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/16favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"qzsking1.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="简洁">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2024年Hexo博客迁移到另一台电脑">
+<meta property="og:url" content="https://qzsking1.github.io/2024/07/17/2024%E5%B9%B4Hexo%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E5%88%B0%E5%8F%A6%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91/index.html">
+<meta property="og:site_name" content="秦一的博客">
+<meta property="og:description" content="简洁">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://qzsking1.github.io/2024/07/17/2024%E5%B9%B4Hexo%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E5%88%B0%E5%8F%A6%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91/.%5Cimages%5CHexo%5CLEGO-LOAM.png">
+<meta property="article:published_time" content="2024-07-17T10:57:34.000Z">
+<meta property="article:modified_time" content="2024-07-18T11:11:44.899Z">
+<meta property="article:author" content="秦一">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="记录">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://qzsking1.github.io/2024/07/17/2024%E5%B9%B4Hexo%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E5%88%B0%E5%8F%A6%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91/.%5Cimages%5CHexo%5CLEGO-LOAM.png">
+
+<link rel="canonical" href="https://qzsking1.github.io/2024/07/17/2024%E5%B9%B4Hexo%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E5%88%B0%E5%8F%A6%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>2024年Hexo博客迁移到另一台电脑 | 秦一的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">秦一的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://qzsking1.github.io/2024/07/17/2024%E5%B9%B4Hexo%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E5%88%B0%E5%8F%A6%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="秦一">
+      <meta itemprop="description" content="吸引着每一个人">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="秦一的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2024年Hexo博客迁移到另一台电脑
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-07-17 18:57:34" itemprop="dateCreated datePublished" datetime="2024-07-17T18:57:34+08:00">2024-07-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-07-18 19:11:44" itemprop="dateModified" datetime="2024-07-18T19:11:44+08:00">2024-07-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">博客搭建</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.1k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>简洁</p>
+<a id="more"></a>
+<h2 id="基本情况"><a class="header-anchor" href="#基本情况">¶</a>基本情况</h2>
+<p>Win11系统</p>
+<p>所有命令均在PS进行</p>
+<h2 id="准备"><a class="header-anchor" href="#准备">¶</a>准备</h2>
+<h3 id="安装Node-js"><a class="header-anchor" href="#安装Node-js">¶</a>安装Node.js</h3>
+<p>安装过程我只更改了路径，其他保持默认，一步步点击<code>Next</code>。</p>
+<h3 id="安装git"><a class="header-anchor" href="#安装git">¶</a>安装git</h3>
+<p>略</p>
+<h3 id="配置npm代理"><a class="header-anchor" href="#配置npm代理">¶</a>配置npm代理</h3>
+<p>设置npm代理</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm config set proxy http:&#x2F;&#x2F;127.0.0.1:7897</span><br><span class="line">npm config set https-proxy http:&#x2F;&#x2F;127.0.0.1:7897</span><br><span class="line"># 注意代理工具默认的隧道地址为http:&#x2F;&#x2F;127.0.0.1:7897</span><br><span class="line"># 注意你的代理工具的端口号</span><br></pre></td></tr></table></figure>
+<p>如果要取消代理，则</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config delete proxy</span><br><span class="line">npm config delete https-proxy</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>参考：</p>
+<p><a href="https://blog.zuiyu1818.cn/posts/node_package" target="_blank" rel="noopener">https://blog.zuiyu1818.cn/posts/node_package</a></p>
+</blockquote>
+<h3 id="配置git代理"><a class="header-anchor" href="#配置git代理">¶</a>配置git代理</h3>
+<p>1.全局代理</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy http:&#x2F;&#x2F;127.0.0.1:7897</span><br><span class="line">git config --global https.proxy https:&#x2F;&#x2F;127.0.0.1:7897</span><br><span class="line"># 注意你的代理工具的端口号</span><br></pre></td></tr></table></figure>
+<p>2.只对github代理</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.https:&#x2F;&#x2F;github.com.proxy https:&#x2F;&#x2F;127.0.0.1:7897</span><br><span class="line">git config --global https.https:&#x2F;&#x2F;github.com.proxy https:&#x2F;&#x2F;127.0.0.1:7897</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>参考：</p>
+<p><a href="https://www.cnblogs.com/China-Dream/p/16476775.html" target="_blank" rel="noopener">https://www.cnblogs.com/China-Dream/p/16476775.html</a></p>
+</blockquote>
+<h3 id="备份文件夹文件"><a class="header-anchor" href="#备份文件夹文件">¶</a>备份文件夹文件</h3>
+<p>需要备份的文件夹文件如下：</p>
+<ol>
+<li>博客配置文件<code>./_config.yml</code></li>
+<li>主题文件夹<code>./theme/</code></li>
+<li>文章及相关内容的文件夹<code>./source/</code></li>
+<li>模板文件夹<code>./scaffolds/</code></li>
+<li>依赖包的名字及版本号<code>./package.json</code></li>
+</ol>
+<h2 id="Hexo本地搭建"><a class="header-anchor" href="#Hexo本地搭建">¶</a>Hexo本地搭建</h2>
+<h3 id="安装Hexo"><a class="header-anchor" href="#安装Hexo">¶</a>安装Hexo</h3>
+<p>创建文件夹<code>blog</code>（即你的博客文件夹，博客的家）</p>
+<p>在该文件夹下，执行下面命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>输出结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">added 53 packages in 12s</span><br><span class="line"></span><br><span class="line">14 packages are looking for funding</span><br><span class="line">  run &#96;npm fund&#96; for details</span><br></pre></td></tr></table></figure>
+<h3 id="复制备份文件夹文件"><a class="header-anchor" href="#复制备份文件夹文件">¶</a>复制备份文件夹文件</h3>
+<p>复制备份文件夹文件到<code>blog</code>中</p>
+<h3 id="在新电脑中重新部署"><a class="header-anchor" href="#在新电脑中重新部署">¶</a>在新电脑中重新部署</h3>
+<p>在<code>blog</code>文件夹中执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p>输出结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">npm warn deprecated resolve-url@0.2.1: https:&#x2F;&#x2F;github.com&#x2F;lydell&#x2F;resolve-url#deprecated</span><br><span class="line">npm warn deprecated cuid@2.1.8: Cuid and other k-sortable and non-cryptographic ids (Ulid, ObjectId, KSUID, all UUIDs) are all insecure. Use @paralleldrive&#x2F;cuid2 instead.</span><br><span class="line">npm warn deprecated source-map-url@0.4.1: See https:&#x2F;&#x2F;github.com&#x2F;lydell&#x2F;source-map-url#deprecated</span><br><span class="line">npm warn deprecated source-map-resolve@0.5.3: See https:&#x2F;&#x2F;github.com&#x2F;lydell&#x2F;source-map-resolve#deprecated</span><br><span class="line">npm warn deprecated urix@0.1.0: Please see https:&#x2F;&#x2F;github.com&#x2F;lydell&#x2F;urix#deprecated</span><br><span class="line">npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.</span><br><span class="line">npm warn deprecated glob@6.0.4: Glob versions prior to v9 are no longer supported</span><br><span class="line">npm warn deprecated rimraf@2.4.5: Rimraf versions prior to v4 are no longer supported</span><br><span class="line">npm warn deprecated highlight.js@9.18.5: Support has ended for 9.x series. Upgrade to @latest</span><br><span class="line">npm warn deprecated hexo-bunyan@2.0.0: Please see https:&#x2F;&#x2F;github.com&#x2F;hexojs&#x2F;hexo-bunyan&#x2F;issues&#x2F;17</span><br><span class="line">npm warn deprecated swig-templates@2.0.3: unmaintained</span><br><span class="line">npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported</span><br><span class="line"></span><br><span class="line">added 246 packages, and audited 247 packages in 26s</span><br><span class="line"></span><br><span class="line">17 packages are looking for funding</span><br><span class="line">  run &#96;npm fund&#96; for details</span><br><span class="line"></span><br><span class="line">15 vulnerabilities (2 low, 7 moderate, 3 high, 3 critical)</span><br><span class="line"></span><br><span class="line">To address issues that do not require attention, run:</span><br><span class="line">  npm audit fix</span><br><span class="line"></span><br><span class="line">To address all issues (including breaking changes), run:</span><br><span class="line">  npm audit fix --force</span><br><span class="line"></span><br><span class="line">Run &#96;npm audit&#96; for details.</span><br></pre></td></tr></table></figure>
+<h3 id="本地测试"><a class="header-anchor" href="#本地测试">¶</a>本地测试</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g   #生成静态文件</span><br><span class="line">hexo s   #启动服务预览</span><br></pre></td></tr></table></figure>
+<p>看命令行输出，你可以访问http://localhost:4000/来预览你的博客了。</p>
+<blockquote>
+<p>注：</p>
+<p>如果服务启动成功，但是使用Chrome打开网址显示<code>此网站无法提供安全连接</code>、<code>ERR_SSL_PROTOCOL_ERROR</code>，是因为Chrome自动把http转为https。你可以更换浏览器尝试或者尝试搜索解决Chrome自动http转为https问题（大概率不是端口号的问题）。</p>
+</blockquote>
+<h2 id="部署至github"><a class="header-anchor" href="#部署至github">¶</a>部署至github</h2>
+<h3 id="安装hexo-deployer-git"><a class="header-anchor" href="#安装hexo-deployer-git">¶</a>安装hexo-deployer-git</h3>
+<p>执行如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>输出结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">up to date, audited 247 packages in 12s</span><br><span class="line"></span><br><span class="line">17 packages are looking for funding</span><br><span class="line">  run &#96;npm fund&#96; for details</span><br><span class="line"></span><br><span class="line">15 vulnerabilities (2 low, 7 moderate, 3 high, 3 critical)</span><br><span class="line"></span><br><span class="line">To address issues that do not require attention, run:</span><br><span class="line">  npm audit fix</span><br><span class="line"></span><br><span class="line">To address all issues (including breaking changes), run:</span><br><span class="line">  npm audit fix --force</span><br><span class="line"></span><br><span class="line">Run &#96;npm audit&#96; for details.</span><br></pre></td></tr></table></figure>
+<h3 id="设置你的账户默认身份"><a class="header-anchor" href="#设置你的账户默认身份">¶</a>设置你的账户默认身份</h3>
+<p>执行下面命令，我填写的是我的github邮箱和我的github名字：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &quot;you@example.com&quot;</span><br><span class="line">git config --global user.name &quot;Your Name&quot;</span><br></pre></td></tr></table></figure>
+<p>两个命令都没有任何输出结果</p>
+<h3 id="链接远程仓库"><a class="header-anchor" href="#链接远程仓库">¶</a>链接远程仓库</h3>
+<p>生成新的SSH钥匙：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</span><br></pre></td></tr></table></figure>
+<p><code>your_email@example.com</code>我填的是github的邮箱，过程期间按回车，完成后，找到并打开生成<code>id_rsa.pub</code>文件（<code>C:\Users\XXX\.ssh\id_rsa.pub</code>），复制所有的内容。</p>
+<p>打开你的github主页，依次点击<code>右上角你的头像</code>-&gt;<code>Settings</code>，在该页面的左侧找到<code>SSH and GPG keys</code>，在<code>SSH keys</code>一栏中点击<code>New SSH key</code>，你可以在<code>Title</code>随便起个名字，并把复制的<code>id_rsa.pub</code>文件内容粘贴到<code>Key</code>中。</p>
+<blockquote>
+<p>注：</p>
+<p>在<code>部署至github</code>这个标题下，起初我没有进行<code>链接远程仓库</code>这个操作，其他依次进行，虽然git了过去，但github pages部署失败。</p>
+</blockquote>
+<h3 id="部署"><a class="header-anchor" href="#部署">¶</a>部署</h3>
+<p>执行下面命令部署至github：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>到这里你就可以在你的github pages查看你的网站啦。</p>
+<h2 id="后记"><a class="header-anchor" href="#后记">¶</a>后记</h2>
+<p>注意本篇使用于之前已经搭建过，需要迁移操作。</p>
+<p>整个过程还是比较简单的。</p>
+<p>有些地方应该增加些解释，对于git、hexo等很多的知识我还没有学习。</p>
+<p>其中的执行命令你都可以在这篇<a href="">文章</a>找到相应的解释。</p>
+<p>如果你发现文章中的任何的错误，欢迎告诉我，也欢迎技术等任何讨论。</p>
+<p>谢谢你的来访，下篇文章见: )</p>
+<blockquote>
+<p>本文参考：</p>
+<p><a href="https://swayye.xyz/2020/01/10/hexo%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB/%EF%BC%88%E4%B8%BB%E8%A6%81%EF%BC%89" target="_blank" rel="noopener">https://swayye.xyz/2020/01/10/hexo博客迁移/（主要）</a></p>
+<p><a href="https://swayye.xyz/2018/12/28/%E5%BB%BA%E7%AB%99%E5%8E%86%E7%A8%8B%EF%BC%9A%E5%AE%89%E8%A3%85%E5%8F%8A%E9%83%A8%E7%BD%B2%E7%AF%87/%EF%BC%88%E4%B8%BB%E8%A6%81%EF%BC%89" target="_blank" rel="noopener">https://swayye.xyz/2018/12/28/建站历程：安装及部署篇/（主要）</a></p>
+</blockquote>
+<p><img src=".%5Cimages%5CHexo%5CLEGO-LOAM.png" alt=""></p>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>欢迎打赏</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.jpg" alt="秦一 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="秦一 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>秦一
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://qzsking1.github.io/2024/07/17/2024%E5%B9%B4Hexo%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E5%88%B0%E5%8F%A6%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91/" title="2024年Hexo博客迁移到另一台电脑">https://qzsking1.github.io/2024/07/17/2024年Hexo博客迁移到另一台电脑/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+              <a href="/tags/%E8%AE%B0%E5%BD%95/" rel="tag"># 记录</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/04/18/Hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6+%E6%89%98%E7%AE%A1Github(%E8%AE%B0%E5%BD%95%E6%95%B4%E7%90%86%E4%B8%8A%E6%89%8B)%F0%9F%91%8D/" rel="prev" title="Hexo博客框架+托管Github(记录整理上手)👍">
+      <i class="fa fa-chevron-left"></i> Hexo博客框架+托管Github(记录整理上手)👍
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本情况"><span class="nav-number">1.</span> <span class="nav-text">基本情况</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准备"><span class="nav-number">2.</span> <span class="nav-text">准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Node-js"><span class="nav-number">2.1.</span> <span class="nav-text">安装Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装git"><span class="nav-number">2.2.</span> <span class="nav-text">安装git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置npm代理"><span class="nav-number">2.3.</span> <span class="nav-text">配置npm代理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置git代理"><span class="nav-number">2.4.</span> <span class="nav-text">配置git代理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#备份文件夹文件"><span class="nav-number">2.5.</span> <span class="nav-text">备份文件夹文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo本地搭建"><span class="nav-number">3.</span> <span class="nav-text">Hexo本地搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number">3.1.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复制备份文件夹文件"><span class="nav-number">3.2.</span> <span class="nav-text">复制备份文件夹文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在新电脑中重新部署"><span class="nav-number">3.3.</span> <span class="nav-text">在新电脑中重新部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本地测试"><span class="nav-number">3.4.</span> <span class="nav-text">本地测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署至github"><span class="nav-number">4.</span> <span class="nav-text">部署至github</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装hexo-deployer-git"><span class="nav-number">4.1.</span> <span class="nav-text">安装hexo-deployer-git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置你的账户默认身份"><span class="nav-number">4.2.</span> <span class="nav-text">设置你的账户默认身份</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链接远程仓库"><span class="nav-number">4.3.</span> <span class="nav-text">链接远程仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署"><span class="nav-number">4.4.</span> <span class="nav-text">部署</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后记"><span class="nav-number">5.</span> <span class="nav-text">后记</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="秦一"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">秦一</p>
+  <div class="site-description" itemprop="description">吸引着每一个人</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="/images/wechat.jpg" title="WeChat → &#x2F;images&#x2F;wechat.jpg"><i class="fab fa-weixin fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">秦一</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
